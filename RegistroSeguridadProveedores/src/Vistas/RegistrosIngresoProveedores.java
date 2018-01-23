@@ -28,6 +28,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.txt_n_registro.setVisible(false);
+        this.btn_conuslta2.setVisible(false);
         cargar_tabla();
         cargar_lista_conductor();
         cargar_tabla_autorizo();
@@ -78,7 +79,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         txt_estado = new javax.swing.JTextField();
         combo_marca = new javax.swing.JComboBox();
         jLabel11 = new javax.swing.JLabel();
-        btn_conuslta = new javax.swing.JButton();
+        btn_conuslta2 = new javax.swing.JButton();
         btn_conuslta1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla_registro = new javax.swing.JTable();
@@ -312,14 +313,15 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         jLabel11.setText("SALE :");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 200, 50, 21));
 
-        btn_conuslta.setText("...");
-        btn_conuslta.setToolTipText("Pulsa para Buscar un conductor");
-        btn_conuslta.addActionListener(new java.awt.event.ActionListener() {
+        btn_conuslta2.setText("...");
+        btn_conuslta2.setToolTipText("Pulsa para Buscar un conductor");
+        btn_conuslta2.setEnabled(false);
+        btn_conuslta2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_conusltaActionPerformed(evt);
+                btn_conuslta2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_conuslta, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 90, 40, -1));
+        jPanel1.add(btn_conuslta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 90, 40, -1));
 
         btn_conuslta1.setText("...");
         btn_conuslta1.setToolTipText("Pulsa para Buscar un conductor");
@@ -971,13 +973,13 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
 
     }//GEN-LAST:event_combo_marcaItemStateChanged
 
-    private void btn_conusltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_conusltaActionPerformed
+    private void btn_conuslta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_conuslta2ActionPerformed
         
         ConsultarAutorizado frame = new ConsultarAutorizado();
         frame.setVisible(true);
         this.dispose();
                 
-    }//GEN-LAST:event_btn_conusltaActionPerformed
+    }//GEN-LAST:event_btn_conuslta2ActionPerformed
 
     private void btn_conuslta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_conuslta1ActionPerformed
         ConsultarConductor frame = new ConsultarConductor();
@@ -1021,8 +1023,8 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_actualizar;
-    private javax.swing.JButton btn_conuslta;
     private javax.swing.JButton btn_conuslta1;
+    private javax.swing.JButton btn_conuslta2;
     public javax.swing.JButton btn_guardar;
     private javax.swing.JButton btn_limpiar;
     private javax.swing.JButton btn_refrescar;
