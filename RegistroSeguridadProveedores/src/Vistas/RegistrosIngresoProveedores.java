@@ -984,7 +984,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
     private void btn_conuslta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_conuslta1ActionPerformed
         ConsultarConductor frame = new ConsultarConductor();
         frame.setVisible(true);
-        this.dispose();
+        // this.dispose();
     }//GEN-LAST:event_btn_conuslta1ActionPerformed
 //    /**
 //     * @param args the command line arguments
