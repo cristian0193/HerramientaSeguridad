@@ -6,15 +6,11 @@ package Vistas;
  */
 public class Menu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Menu
-     */
     public Menu() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setExtendedState(MAXIMIZED_BOTH);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -73,8 +69,10 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(176, 176, 176))
         );
 
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/add.png"))); // NOI18N
         jMenu1.setText("Registro");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/exportar.png"))); // NOI18N
         jMenuItem1.setText("Ingreso y Salida de Proveedor");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,8 +92,10 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/buscar.png"))); // NOI18N
         jMenu3.setText("Consultar");
 
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/graficos.png"))); // NOI18N
         jMenuItem5.setText("Consulta de Salidas Proveedor");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,8 +115,10 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/herramienta.png"))); // NOI18N
         jMenu6.setText("Utilidades");
 
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/reporte.png"))); // NOI18N
         jMenuItem10.setText("Exportar Excel");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,8 +129,10 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/semana.png"))); // NOI18N
         jMenu2.setText("Administracion");
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/admin.png"))); // NOI18N
         jMenuItem2.setText("Conductores");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +141,7 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem2);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/admin.png"))); // NOI18N
         jMenuItem3.setText("Autorizacion");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +150,7 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem3);
 
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/admin.png"))); // NOI18N
         jMenuItem4.setText("Guardas");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

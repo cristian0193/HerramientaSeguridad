@@ -16,6 +16,7 @@ public class ConsultarAutorizado extends javax.swing.JFrame {
     public ConsultarAutorizado() {
         initComponents();
         this.setLocationRelativeTo(null);
+        txt_conductor.setVisible(false);
         cargar_tabla_conductor();
         ancho_columnas();
         
@@ -36,6 +37,7 @@ public class ConsultarAutorizado extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         combo_filtro = new javax.swing.JComboBox();
         btn_guardar1 = new javax.swing.JButton();
+        txt_conductor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -140,7 +142,8 @@ public class ConsultarAutorizado extends javax.swing.JFrame {
                         .addComponent(combo_filtro, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(107, 107, 107)
+                        .addComponent(txt_conductor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -158,7 +161,9 @@ public class ConsultarAutorizado extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                    .addComponent(txt_conductor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -178,8 +183,9 @@ public class ConsultarAutorizado extends javax.swing.JFrame {
         } else {
             nombre = tabla_conductores_buscar.getValueAt(select, 1).toString();                       
 
-             original.combo_autorizo.setSelectedItem(nombre);
-             original.setVisible(true);
+            original.combo_conductor.setSelectedItem(txt_conductor.getText());
+            original.combo_autorizo.setSelectedItem(nombre);
+            original.setVisible(true);
              this.hide();
             
 
@@ -280,6 +286,7 @@ public class ConsultarAutorizado extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabla_conductores_buscar;
+    public javax.swing.JLabel txt_conductor;
     private javax.swing.JTextField txt_nombre_cond;
     // End of variables declaration//GEN-END:variables
  
