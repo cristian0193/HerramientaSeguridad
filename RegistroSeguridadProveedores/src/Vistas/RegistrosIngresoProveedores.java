@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Christian Rodriguez
+ * @author Usuario
  */
 public class RegistrosIngresoProveedores extends javax.swing.JFrame {
 
@@ -41,6 +41,8 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -80,6 +82,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         btn_conuslta = new javax.swing.JButton();
         btn_conuslta1 = new javax.swing.JButton();
+        txt_nombre_conductor_consultado = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla_registro = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
@@ -101,6 +104,9 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         txt_consultar_conductor = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         txt_consultar_empresa = new javax.swing.JTextField();
+
+        jMenuItem1.setText("Detalle de Observacion");
+        jPopupMenu1.add(jMenuItem1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1240, 630));
@@ -141,29 +147,29 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         jPanel1.add(txt_ficha, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 63, 47));
 
         jLabel4.setText("NUMERO CEDULA :");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 170, 20));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 170, 20));
 
         jLabel5.setText("EMPRESA :");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 160, 20));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 160, 20));
 
         jLabel6.setText("PLACA VEHICULO :");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 160, 20));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 160, 20));
 
         txt_numero_cedula.setEditable(false);
-        jPanel1.add(txt_numero_cedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 210, -1));
+        jPanel1.add(txt_numero_cedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 210, -1));
 
         txt_empresa.setEditable(false);
-        jPanel1.add(txt_empresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 272, -1));
+        jPanel1.add(txt_empresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 272, -1));
 
         txt_placa.setEditable(false);
-        jPanel1.add(txt_placa, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 132, -1));
+        jPanel1.add(txt_placa, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 132, -1));
 
         jLabel7.setText("FECHA Y HORA DE INGRESO :");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 180, 20));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 180, 20));
 
         txt_fecha_ingreso.setEditable(false);
         txt_fecha_ingreso.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jPanel1.add(txt_fecha_ingreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 205, -1));
+        jPanel1.add(txt_fecha_ingreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 205, -1));
 
         jLabel8.setText("FECHA Y HORA DE SALIDA :");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, 167, 20));
@@ -220,7 +226,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
                 btn_guardarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 90, 30));
+        jPanel1.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 90, 30));
 
         btn_actualizar.setBackground(new java.awt.Color(255, 102, 102));
         btn_actualizar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -231,7 +237,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
                 btn_actualizarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 90, 30));
+        jPanel1.add(btn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 90, 30));
 
         btn_limpiar.setBackground(new java.awt.Color(0, 153, 255));
         btn_limpiar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -242,7 +248,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
                 btn_limpiarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 90, 30));
+        jPanel1.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 90, 30));
 
         btn_refrescar.setBackground(new java.awt.Color(255, 255, 51));
         btn_refrescar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -253,7 +259,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
                 btn_refrescarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_refrescar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 90, 30));
+        jPanel1.add(btn_refrescar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 90, 30));
 
         txt_n_registro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txt_n_registro.setForeground(new java.awt.Color(255, 0, 0));
@@ -306,11 +312,11 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
                 combo_marcaItemStateChanged(evt);
             }
         });
-        jPanel1.add(combo_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 110, -1));
+        jPanel1.add(combo_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 110, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setText("SALE :");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 200, 50, 21));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 50, 21));
 
         btn_conuslta.setText("...");
         btn_conuslta.setToolTipText("Pulsa para Buscar un conductor");
@@ -329,6 +335,9 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btn_conuslta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 37, 40, -1));
+
+        txt_nombre_conductor_consultado.setEditable(false);
+        jPanel1.add(txt_nombre_conductor_consultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 210, -1));
 
         tabla_registro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -359,7 +368,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         jLabel25.setText("Cedula :");
 
         txt_consulta_cedula.setEditable(false);
-        txt_consulta_cedula.setToolTipText("Numero de Registro del proyecto");
+        txt_consulta_cedula.setToolTipText("");
         txt_consulta_cedula.setEnabled(false);
 
         jLabel21.setText("Seleccionar Filtro :");
@@ -396,7 +405,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         txt_consulta_autorizo.setEnabled(false);
 
         txt_consulta_guarda.setEditable(false);
-        txt_consulta_guarda.setToolTipText("Numero de Registro del proyecto");
+        txt_consulta_guarda.setToolTipText("");
         txt_consulta_guarda.setEnabled(false);
 
         jButton5.setBackground(new java.awt.Color(102, 255, 255));
@@ -418,7 +427,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         jLabel27.setText("Empresa:");
 
         txt_consultar_empresa.setEditable(false);
-        txt_consultar_empresa.setToolTipText("Numero de Registro del proyecto");
+        txt_consultar_empresa.setToolTipText("");
         txt_consultar_empresa.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -564,7 +573,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
             int numero = validacion_ficha_repetida(ficha);
 
             if (numero > 0) {
-                JOptionPane.showMessageDialog(null, "LA FICHA : " + ficha + " SE ENCUENTRA EN USADO");
+                JOptionPane.showMessageDialog(null, "LA FICHA : " + ficha + " SE ENCUENTRA SIENDO USADA");
             } else {
                 conexion.cerrar();
                 conexion = new ConexioSQLite();
@@ -718,6 +727,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
             this.txt_fecha_ingreso.setText("" + formatoFecha.format(fecha) + " " + formatoHora.format(fecha) + "");
             this.txt_estado.setText("INGRESO");
             this.txt_estado_color.setBackground(Color.GREEN);
+            this.txt_nombre_conductor_consultado.setText("");
 
 //            Calendar calendario = Calendar.getInstance();
 //            int dia, mes, año, hora, minutos, segundos;
@@ -740,14 +750,15 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_combo_conductorItemStateChanged
 
     private void tabla_registroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabla_registroMouseClicked
-
+ 
         int rec = this.tabla_registro.getSelectedRow();
 
         this.txt_n_registro.setText(tabla_registro.getValueAt(rec, 0).toString());
         this.txt_fecha_ingreso.setText(tabla_registro.getValueAt(rec, 1).toString());
         this.txt_ficha.setText(tabla_registro.getValueAt(rec, 2).toString());
 
-        this.combo_conductor.setSelectedItem(tabla_registro.getValueAt(rec, 3).toString());
+        // this.combo_conductor.setSelectedItem(tabla_registro.getValueAt(rec, 3).toString());
+        this.txt_nombre_conductor_consultado.setText(tabla_registro.getValueAt(rec, 3).toString());
         this.txt_empresa.setText(tabla_registro.getValueAt(rec, 4).toString());
         this.txt_numero_cedula.setText(tabla_registro.getValueAt(rec, 5).toString());
         this.txt_placa.setText(tabla_registro.getValueAt(rec, 6).toString());
@@ -763,90 +774,84 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
 
         int index = combo_consulta.getSelectedIndex();
 
-        switch (index) {
-            case 0:
-                JOptionPane.showMessageDialog(null, "SELECCIONE UNA OPCION");
-                break;
-            case 1:
-                this.txt_consulta_inicial.setEnabled(true);
-                this.txt_consulta_final.setEnabled(true);
-                this.txt_consulta_placa.setEnabled(false);
-                this.txt_consulta_cedula.setEnabled(false);
-                this.txt_consulta_autorizo.setEnabled(false);
-                this.txt_consulta_guarda.setEnabled(false);
-                this.txt_consulta_inicial.setEditable(true);
-                this.txt_consulta_final.setEditable(true);
-                this.txt_consultar_conductor.setEnabled(false);
-                this.txt_consultar_empresa.setEnabled(false);
-                break;
-            case 2:
-                this.txt_consulta_inicial.setEnabled(false);
-                this.txt_consulta_final.setEnabled(false);
-                this.txt_consulta_placa.setEnabled(true);
-                this.txt_consulta_cedula.setEnabled(false);
-                this.txt_consulta_autorizo.setEnabled(false);
-                this.txt_consulta_guarda.setEnabled(false);
-                this.txt_consulta_placa.setEditable(true);
-                this.txt_consultar_conductor.setEnabled(false);
-                this.txt_consultar_empresa.setEnabled(false);
-                break;
-            case 3:
-                this.txt_consulta_inicial.setEnabled(false);
-                this.txt_consulta_final.setEnabled(false);
-                this.txt_consulta_placa.setEnabled(false);
-                this.txt_consulta_cedula.setEnabled(true);
-                this.txt_consulta_autorizo.setEnabled(false);
-                this.txt_consulta_guarda.setEnabled(false);
-                this.txt_consulta_cedula.setEditable(true);
-                this.txt_consultar_conductor.setEnabled(false);
-                this.txt_consultar_empresa.setEnabled(false);
-                break;
-            case 4:
-                this.txt_consulta_inicial.setEnabled(false);
-                this.txt_consulta_final.setEnabled(false);
-                this.txt_consulta_placa.setEnabled(false);
-                this.txt_consulta_cedula.setEnabled(false);
-                this.txt_consulta_autorizo.setEnabled(true);
-                this.txt_consulta_guarda.setEnabled(false);
-                this.txt_consulta_autorizo.setEditable(true);
-                this.txt_consultar_conductor.setEnabled(false);
-                this.txt_consultar_empresa.setEnabled(false);
-                break;
-            case 5:
-                this.txt_consulta_inicial.setEnabled(false);
-                this.txt_consulta_final.setEnabled(false);
-                this.txt_consulta_placa.setEnabled(false);
-                this.txt_consulta_cedula.setEnabled(false);
-                this.txt_consulta_autorizo.setEnabled(false);
-                this.txt_consulta_guarda.setEnabled(true);
-                this.txt_consulta_guarda.setEditable(true);
-                this.txt_consultar_conductor.setEnabled(false);
-                this.txt_consultar_empresa.setEnabled(false);
-                break;
-            case 6:
-                this.txt_consulta_inicial.setEnabled(false);
-                this.txt_consulta_final.setEnabled(false);
-                this.txt_consulta_placa.setEnabled(false);
-                this.txt_consulta_cedula.setEnabled(false);
-                this.txt_consulta_autorizo.setEnabled(false);
-                this.txt_consulta_guarda.setEnabled(false);
-                this.txt_consulta_guarda.setEditable(false);
-                this.txt_consultar_conductor.setEnabled(true);
-                this.txt_consultar_conductor.setEditable(true);
-                this.txt_consultar_empresa.setEnabled(false);
-                break;
-            default:
-                this.txt_consulta_inicial.setEnabled(false);
-                this.txt_consulta_final.setEnabled(false);
-                this.txt_consulta_placa.setEnabled(false);
-                this.txt_consulta_cedula.setEnabled(false);
-                this.txt_consulta_autorizo.setEnabled(false);
-                this.txt_consulta_guarda.setEnabled(false);
-                this.txt_consulta_guarda.setEditable(false);
-                this.txt_consultar_conductor.setEnabled(false);
-                this.txt_consultar_empresa.setEnabled(true);
-                this.txt_consultar_empresa.setEditable(true);
-                break;
+        if (index == 0) {
+            JOptionPane.showMessageDialog(null, "SELECCIONE UNA OPCION");
+        } else if (index == 1) {
+            this.txt_consulta_inicial.setEnabled(true);
+            this.txt_consulta_final.setEnabled(true);
+            this.txt_consulta_placa.setEnabled(false);
+            this.txt_consulta_cedula.setEnabled(false);
+            this.txt_consulta_autorizo.setEnabled(false);
+            this.txt_consulta_guarda.setEnabled(false);
+            this.txt_consulta_inicial.setEditable(true);
+            this.txt_consulta_final.setEditable(true);
+            this.txt_consultar_conductor.setEnabled(false);
+            this.txt_consultar_empresa.setEnabled(false);
+
+        } else if (index == 2) {
+            this.txt_consulta_inicial.setEnabled(false);
+            this.txt_consulta_final.setEnabled(false);
+            this.txt_consulta_placa.setEnabled(true);
+            this.txt_consulta_cedula.setEnabled(false);
+            this.txt_consulta_autorizo.setEnabled(false);
+            this.txt_consulta_guarda.setEnabled(false);
+            this.txt_consulta_placa.setEditable(true);
+            this.txt_consultar_conductor.setEnabled(false);
+            this.txt_consultar_empresa.setEnabled(false);
+        } else if (index == 3) {
+            this.txt_consulta_inicial.setEnabled(false);
+            this.txt_consulta_final.setEnabled(false);
+            this.txt_consulta_placa.setEnabled(false);
+            this.txt_consulta_cedula.setEnabled(true);
+            this.txt_consulta_autorizo.setEnabled(false);
+            this.txt_consulta_guarda.setEnabled(false);
+            this.txt_consulta_cedula.setEditable(true);
+            this.txt_consultar_conductor.setEnabled(false);
+            this.txt_consultar_empresa.setEnabled(false);
+        } else if (index == 4) {
+            this.txt_consulta_inicial.setEnabled(false);
+            this.txt_consulta_final.setEnabled(false);
+            this.txt_consulta_placa.setEnabled(false);
+            this.txt_consulta_cedula.setEnabled(false);
+            this.txt_consulta_autorizo.setEnabled(true);
+            this.txt_consulta_guarda.setEnabled(false);
+            this.txt_consulta_autorizo.setEditable(true);
+            this.txt_consultar_conductor.setEnabled(false);
+            this.txt_consultar_empresa.setEnabled(false);
+        } else if (index == 5) {
+            this.txt_consulta_inicial.setEnabled(false);
+            this.txt_consulta_final.setEnabled(false);
+            this.txt_consulta_placa.setEnabled(false);
+            this.txt_consulta_cedula.setEnabled(false);
+            this.txt_consulta_autorizo.setEnabled(false);
+            this.txt_consulta_guarda.setEnabled(true);
+            this.txt_consulta_guarda.setEditable(true);
+            this.txt_consultar_conductor.setEnabled(false);
+            this.txt_consultar_empresa.setEnabled(false);
+        } else if (index == 6) {
+            this.txt_consulta_inicial.setEnabled(false);
+            this.txt_consulta_final.setEnabled(false);
+            this.txt_consulta_placa.setEnabled(false);
+            this.txt_consulta_cedula.setEnabled(false);
+            this.txt_consulta_autorizo.setEnabled(false);
+            this.txt_consulta_guarda.setEnabled(false);
+            this.txt_consulta_guarda.setEditable(false);
+            this.txt_consultar_conductor.setEnabled(true);
+            this.txt_consultar_conductor.setEditable(true);
+            this.txt_consultar_empresa.setEnabled(false);
+            
+            
+        } else  {
+            this.txt_consulta_inicial.setEnabled(false);
+            this.txt_consulta_final.setEnabled(false);
+            this.txt_consulta_placa.setEnabled(false);
+            this.txt_consulta_cedula.setEnabled(false);
+            this.txt_consulta_autorizo.setEnabled(false);
+            this.txt_consulta_guarda.setEnabled(false);
+            this.txt_consulta_guarda.setEditable(false);
+            this.txt_consultar_conductor.setEnabled(false);
+            this.txt_consultar_empresa.setEnabled(true);
+            this.txt_consultar_empresa.setEditable(true);
         }
     }//GEN-LAST:event_combo_consultaItemStateChanged
 
@@ -858,84 +863,92 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
 
         int index = combo_consulta.getSelectedIndex();
 
-        switch (index) {
-            case 0:
-                JOptionPane.showMessageDialog(null, "SELECCIONE UNA OPCION");
-                break;
-            case 1:
-                if (this.txt_consulta_inicial.getText().equals("")) {
-                    JOptionPane.showMessageDialog(null, "INGRESE FECHA INICIAL");
-                } else if (this.txt_consulta_final.getText().equals("")) {
-                    JOptionPane.showMessageDialog(null, "INGRESE FECHA FINAL");
-                } else {
-                    String fecha_ini = txt_consulta_inicial.getText();
-                    String fecha_fin = txt_consulta_final.getText();
-                    
-                    consulta_rango_fechas(fecha_ini, fecha_fin);
-                    ancho_columnas();
-                    centrar_datos();
-                    conexion.cerrar();
-                }   break;
-            case 2:
-                String placa = txt_consulta_placa.getText();
-                if (placa.equals("")) {
-                    JOptionPane.showMessageDialog(null, "INGRESE PLACA");
-                } else {
-                    consulta_placa(placa);
-                    ancho_columnas();
-                    centrar_datos();
-                    conexion.cerrar();
-                }   break;
-            case 3:
-                String cedula = txt_consulta_cedula.getText();
-                if (cedula.equals("")) {
-                    JOptionPane.showMessageDialog(null, "INGRESE CEDULA");
-                } else {
-                    consulta_cedula(cedula);
-                    ancho_columnas();
-                    centrar_datos();
-                    conexion.cerrar();
-                }   break;
-            case 4:
-                String autorizo = txt_consulta_autorizo.getText();
-                if (autorizo.equals("")) {
-                    JOptionPane.showMessageDialog(null, "INGRESE AUTORIZADO");
-                } else {
-                    consulta_autorizo(autorizo);
-                    ancho_columnas();
-                    centrar_datos();
-                    conexion.cerrar();
-                }   break;
-            case 5:
-                String guarda = txt_consulta_guarda.getText();
-                if (guarda.equals("")) {
-                    JOptionPane.showMessageDialog(null, "INGRESE GUARDA");
-                } else {
-                    consulta_guarda(guarda);
-                    ancho_columnas();
-                    centrar_datos();
-                    conexion.cerrar();
-                }   break;
-            case 6:
-                String conductor = txt_consultar_conductor.getText();
-                if (conductor.equals("")) {
-                    JOptionPane.showMessageDialog(null, "INGRESE CONDUCTOR");
-                } else {
-                    consulta_conductor(conductor);
-                    ancho_columnas();
-                    centrar_datos();
-                    conexion.cerrar();
-                }   break;
-            default:
-                String empresa = txt_consultar_empresa.getText();
-                if (empresa.equals("")) {
-                    JOptionPane.showMessageDialog(null, "INGRESE EMPRESA");
-                } else {
-                    consulta_empresa(empresa);
-                    ancho_columnas();
-                    centrar_datos();
-                    conexion.cerrar();
-                }   break;
+        if (index == 0) {
+            JOptionPane.showMessageDialog(null, "SELECCIONE UNA OPCION");
+        } else if (index == 1) {
+
+            if (this.txt_consulta_inicial.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "INGRESE FECHA INICIAL");
+            } else if (this.txt_consulta_final.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "INGRESE FECHA FINAL");
+            } else {
+                String fecha_ini = txt_consulta_inicial.getText();
+                String fecha_fin = txt_consulta_final.getText();
+
+                consulta_rango_fechas(fecha_ini, fecha_fin);
+                ancho_columnas();
+                centrar_datos();
+                conexion.cerrar();
+            }
+
+        } else if (index == 2) {
+
+            String placa = txt_consulta_placa.getText();
+
+            if (placa.equals("")) {
+                JOptionPane.showMessageDialog(null, "INGRESE PLACA");
+            } else {
+                consulta_placa(placa);
+                ancho_columnas();
+                centrar_datos();
+                conexion.cerrar();
+            }
+
+        } else if (index == 3) {
+            String cedula = txt_consulta_cedula.getText();
+
+            if (cedula.equals("")) {
+                JOptionPane.showMessageDialog(null, "INGRESE CEDULA");
+            } else {
+                consulta_cedula(cedula);
+                ancho_columnas();
+                centrar_datos();
+                conexion.cerrar();
+            }
+        } else if (index == 4) {
+            String autorizo = txt_consulta_autorizo.getText();
+
+            if (autorizo.equals("")) {
+                JOptionPane.showMessageDialog(null, "INGRESE AUTORIZADO");
+            } else {
+                consulta_autorizo(autorizo);
+                ancho_columnas();
+                centrar_datos();
+                conexion.cerrar();
+            }
+        } else if (index == 5){
+            String guarda = txt_consulta_guarda.getText();
+
+            if (guarda.equals("")) {
+                JOptionPane.showMessageDialog(null, "INGRESE GUARDA");
+            } else {
+                consulta_guarda(guarda);
+                ancho_columnas();
+                centrar_datos();
+                conexion.cerrar();
+            }
+        } else if (index == 6){
+            String conductor = txt_consultar_conductor.getText();
+
+            if (conductor.equals("")) {
+                JOptionPane.showMessageDialog(null, "INGRESE CONDUCTOR");
+            } else {
+                consulta_conductor(conductor);
+                ancho_columnas();
+                centrar_datos();
+                conexion.cerrar();
+            }
+        } else {
+            String empresa = txt_consultar_empresa.getText();
+
+            if (empresa.equals("")) {
+                JOptionPane.showMessageDialog(null, "INGRESE EMPRESA");
+            } else {
+                consulta_empresa(empresa);
+                ancho_columnas();
+                centrar_datos();
+                conexion.cerrar();
+            }
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -946,7 +959,6 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
     private void combo_marcaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_combo_marcaItemStateChanged
 
         int opcion = combo_marca.getSelectedIndex();
-       
         if (opcion == 0) {
             this.txt_fecha_salida.setText("");
             this.txt_estado.setText("");
@@ -965,7 +977,6 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
             this.txt_estado_color.setBackground(Color.RED);
             this.btn_actualizar.setEnabled(true);
             this.btn_guardar.setEnabled(false);
-
         }
 
     }//GEN-LAST:event_combo_marcaItemStateChanged
@@ -984,6 +995,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         ConsultarConductor frame = new ConsultarConductor();
         frame.setVisible(true);
         this.dispose();
+        this.txt_nombre_conductor_consultado.setText("");
     }//GEN-LAST:event_btn_conuslta1ActionPerformed
 //    /**
 //     * @param args the command line arguments
@@ -1059,7 +1071,9 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tabla_registro;
@@ -1078,6 +1092,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
     private javax.swing.JTextField txt_fecha_salida;
     private javax.swing.JTextField txt_ficha;
     private javax.swing.JTextField txt_n_registro;
+    private javax.swing.JTextField txt_nombre_conductor_consultado;
     private javax.swing.JTextField txt_numero_cedula;
     private javax.swing.JTextArea txt_observaciones;
     private javax.swing.JTextField txt_placa;
@@ -1096,6 +1111,7 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
         txt_numero_cedula.setText("");
         txt_observaciones.setText("");
         txt_placa.setText("");
+        txt_nombre_conductor_consultado.setText("");
 
     }
 
@@ -1525,7 +1541,8 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
 
         }
     }
-        
+    
+    
      // METODO PARA CONSULTAR CONDUCTOR
     public void consulta_empresa(String empresa) {
 
@@ -1586,7 +1603,8 @@ public class RegistrosIngresoProveedores extends javax.swing.JFrame {
 
         }
     }
-        
+    
+    
     // METODO PARA CARGAR JCOMBOBOX CONDUCTORES
     public void cargar_lista_conductor() {
 

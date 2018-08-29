@@ -36,6 +36,8 @@ public class RegistrosSalidaProveedores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla_registro = new javax.swing.JTable();
@@ -60,6 +62,14 @@ public class RegistrosSalidaProveedores extends javax.swing.JFrame {
         txt_consultar_empresa = new javax.swing.JTextField();
         txt_consultar_conductor = new javax.swing.JTextField();
 
+        jMenuItem1.setText("Detalle de Observacion");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(jMenuItem1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1240, 630));
         setResizable(false);
@@ -76,6 +86,7 @@ public class RegistrosSalidaProveedores extends javax.swing.JFrame {
 
             }
         ));
+        tabla_registro.setComponentPopupMenu(jPopupMenu1);
         tabla_registro.setRowHeight(25);
         tabla_registro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -271,8 +282,7 @@ public class RegistrosSalidaProveedores extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_consultar_empresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(txt_consultar_empresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
                 .addContainerGap())
@@ -476,6 +486,42 @@ public class RegistrosSalidaProveedores extends javax.swing.JFrame {
         conexion.cerrar();
     }//GEN-LAST:event_btn_refrescarActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+       
+        int rec = 0;
+        String id = "", query = "", observaciones = "";
+        
+        rec = this.tabla_registro.getSelectedRow();
+        id = tabla_registro.getValueAt(rec, 0).toString();
+        
+        ConexioSQLite con = new ConexioSQLite();
+        Connection cn = con.Conectar();
+
+        query = "SELECT "
+                + "OBSERVACIONES AS OBSERVACION "
+                + "FROM "
+                + "REGISTRO_SEGURIDAD "
+                + "WHERE ID_REGISTRO = '" + id + "' "
+                + "ORDER BY FECHA_ENTRADA DESC;";
+        System.out.println(query);
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            
+            observaciones = rs.getString("OBSERVACION");
+                       
+            cn.close();
+            new Observaciones(null, true, observaciones).setVisible(true);
+        } catch (SQLException ex) {
+
+            JOptionPane.showMessageDialog(null, ex);
+
+        }
+        
+        
+        
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_refrescar;
@@ -491,6 +537,8 @@ public class RegistrosSalidaProveedores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabla_registro;
     private javax.swing.JTextField txt_consulta_autorizo;

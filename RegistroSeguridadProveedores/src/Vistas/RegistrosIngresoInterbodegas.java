@@ -41,6 +41,8 @@ public class RegistrosIngresoInterbodegas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -95,6 +97,15 @@ public class RegistrosIngresoInterbodegas extends javax.swing.JFrame {
         txt_consulta_autorizo = new javax.swing.JTextField();
         txt_consulta_guarda = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
+
+        jMenuItem1.setText("Detalle de Observacion");
+        jMenuItem1.setComponentPopupMenu(jPopupMenu1);
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(jMenuItem1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1240, 630));
@@ -856,6 +867,40 @@ public class RegistrosIngresoInterbodegas extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_combo_marcaItemStateChanged
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+       
+        int rec = 0;
+        String id = "", query = "", observaciones = "";
+        
+        rec = this.tabla_registro.getSelectedRow();
+        id = tabla_registro.getValueAt(rec, 0).toString();
+        
+        ConexioSQLite con = new ConexioSQLite();
+        Connection cn = con.Conectar();
+
+        query = "SELECT "
+                + "OBSERVACIONES AS OBSERVACION "
+                + "FROM "
+                + "REGISTRO_SEGURIDAD "
+                + "WHERE ID_REGISTRO = '" + id + "' "
+                + "ORDER BY FECHA_ENTRADA DESC;";
+        System.out.println(query);
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            
+            observaciones = rs.getString("OBSERVACION");
+                       
+            cn.close();
+            new Observaciones(null, true, observaciones).setVisible(true);
+        } catch (SQLException ex) {
+
+            JOptionPane.showMessageDialog(null, ex);
+
+        }
+        
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 //    /**
 //     * @param args the command line arguments
 //     */
@@ -926,7 +971,9 @@ public class RegistrosIngresoInterbodegas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tabla_registro;
